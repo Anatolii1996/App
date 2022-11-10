@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="rules">
+        <h2>Правила игры:</h2>
+        <p>
+          Приложение само загадывает значение в заданном диапазоне генерацией
+          случайного числа. В реализации необходимо предусмотреть вариант настроек
+          диапазона чисел Валидация(проверка того что ввел пользователь): не
+          отрицательные, без плавающей точки) . В случае если валидация не прошла
+          необходимо вывести сообщение “вы ввели неверный диапазон” Игра начинается
+          с того, что пользователь видит сообщение: “Привет, я загадал число от min
+          до max вашего диапазона. Попробуй угадать его за 5 попыток!” И
+          пользователю предлагается использовать свою первую попытку путём ввода
+          первого числа в input и нажать кнопку CHECK. В любой момент времени,
+          пользователь может прекратить игру нажав на кнопку EXIT, после чего игра
+          моментально остановится. Со второй попытки для пользователя вводятся
+          подсказки, типа: “Не угадал, но теплее!!! Осталось n попыток” либо “Не
+          угадал, холоднее… Осталось n попыток”.
+        </p>
+      </div>
+      <div class="form">
+        <div class="renge">
+          <label for="max">Max: <input type="number" name="max" id="max" autofocus required/></label>
+          <label for="min">Min: <input type="number" name="min" id="min" required/></label>
+        </div>
+        <label for="num">Number: <input type="number" name="num" id="num" /></label>
+        <div class="buttons">
+          <button id="Start" onclick="startGame()">Играть</button>
+          <button id="check" onclick="checkNumber()" >CHECK</button>
+          <button id="exit" onclick="stopGame()">EXIT</button>
+          
+        </div>
+       
+      
+        <div class="areas">
+          <div class="error" id="error"></div>
+          <div class="last-result" id="last-result"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
